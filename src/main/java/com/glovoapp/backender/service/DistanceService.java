@@ -1,18 +1,16 @@
-package com.glovoapp.backender;
+package com.glovoapp.backender.service;
 
 import com.glovoapp.backender.model.Location;
 
 import static java.lang.Math.*;
 
-/**
- * Shamelessly copied from https://github.com/jasonwinn/haversine
- */
-public class DistanceCalculator {
+public class DistanceService {
 
     private static final int EARTH_RADIUS = 6371;
 
     /**
      * Returns distance between two locations in kilometers
+     * Shamelessly copied from https://github.com/jasonwinn/haversine
      */
     public static double calculateDistance(Location start, Location end) {
         double deltaLat = toRadians((end.getLat() - start.getLat()));
