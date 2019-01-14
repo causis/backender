@@ -3,7 +3,7 @@ package com.glovoapp.backender.repository;
 import com.glovoapp.backender.model.Courier;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -12,7 +12,7 @@ import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
 
-@Component
+@Repository
 public class CourierRepository {
     private static final String COURIERS_FILE = "/couriers.json";
     private static final List<Courier> couriers;

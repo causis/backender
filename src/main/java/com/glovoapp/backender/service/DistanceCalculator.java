@@ -4,7 +4,7 @@ import com.glovoapp.backender.model.Location;
 
 import static java.lang.Math.*;
 
-public class DistanceService {
+public class DistanceCalculator {
 
     private static final int EARTH_RADIUS = 6371;
 

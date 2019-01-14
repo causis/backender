@@ -1,18 +1,18 @@
 package com.glovoapp.backender.repository;
 
 import com.glovoapp.backender.model.Order;
+import com.google.common.collect.ImmutableList;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.Reader;
 import java.lang.reflect.Type;
-import java.util.ArrayList;
 import java.util.List;
 
-@Component
+@Repository
 public class OrderRepository {
     private static final String ORDERS_FILE = "/orders.json";
     private static final List<Order> orders;
@@ -28,6 +28,6 @@ public class OrderRepository {
     }
 
     public List<Order> findAll() {
-        return new ArrayList<>(orders);
+        return ImmutableList.copyOf(orders);
     }
 }

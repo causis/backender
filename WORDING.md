@@ -8,7 +8,7 @@ files and your git folders with it.
 
 Add a new endpoint under `/orders/:courierId` to retrieve the list of orders
 that are available for a particular courier. The format should be the same
-one you can find in the endpoint `/orders`, which is alredy implemented.
+one you can find in the endpoint `/orders`, which is already implemented.
 
 ## Hide
 

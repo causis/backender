@@ -25,4 +25,11 @@ class OrderIntegrationTest {
                 .andExpect(status().isOk())
                 .andExpect(content().string("[{\"id\":\"order-1\",\"description\":\"I want a pizza cut into very small slices\"}]"));
     }
+
+    @Test
+    void orders_courierId_ok() throws Exception {
+        mockMvc.perform(get("/orders/1"))
+                .andExpect(status().isOk())
+                .andExpect(content().string("[{\"id\":\"order-1\",\"description\":\"I want a pizza cut into very small slices\"}]"));
+    }
 }
