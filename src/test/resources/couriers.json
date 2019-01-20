@@ -8,5 +8,25 @@
       "lat": 41.3965463,
       "lon": 2.1963997
     }
+  },
+  {
+    "id": "courier-2",
+    "name": "Leandro Flores",
+    "box": false,
+    "vehicle": "MOTORCYCLE",
+    "location": {
+      "lat": 41.3965463,
+      "lon": 2.1963997
+    }
+  },
+  {
+    "id": "courier-3",
+    "name": "Cosme Fulanito",
+    "box": true,
+    "vehicle": "BICYCLE",
+    "location": {
+      "lat": 41.0,
+      "lon": 2.2
+    }
   }
 ]

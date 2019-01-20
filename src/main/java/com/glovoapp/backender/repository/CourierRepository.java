@@ -11,6 +11,7 @@ import java.io.Reader;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Repository
 public class CourierRepository {
@@ -27,11 +28,10 @@ public class CourierRepository {
         }
     }
 
-    public Courier findById(String courierId) {
+    public Optional<Courier> findById(String courierId) {
         return couriers.stream()
                 .filter(courier -> courierId.equals(courier.getId()))
-                .findFirst()
-                .orElse(null);
+                .findFirst();
     }
 
     public List<Courier> findAll() {
