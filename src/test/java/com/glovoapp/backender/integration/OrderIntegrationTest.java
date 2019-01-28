@@ -25,7 +25,7 @@ class OrderIntegrationTest {
     void orders_ok() throws Exception {
         mockMvc.perform(get("/orders"))
                 .andExpect(status().isOk())
-                .andExpect(content().string("[{\"id\":\"order-1\",\"description\":\"I want a pizza cut into very small slices\"}]"));
+                .andExpect(content().string("[{\"id\":\"order-1\",\"description\":\"I want a pizza cut into very small slices\"},{\"id\":\"order-2\",\"description\":\"2 chairs\"}]"));
     }
 
     @Test
@@ -34,17 +34,17 @@ class OrderIntegrationTest {
     }
 
     @Test
-    void orders_courierId_ok() throws Exception {
+    void orders_courierId_sorted() throws Exception {
         mockMvc.perform(get("/orders/courier-1"))
                 .andExpect(status().isOk())
-                .andExpect(content().string("[{\"id\":\"order-1\",\"description\":\"I want a pizza cut into very small slices\"}]"));
+                .andExpect(content().string("[{\"id\":\"order-2\",\"description\":\"2 chairs\"},{\"id\":\"order-1\",\"description\":\"I want a pizza cut into very small slices\"}]"));
     }
 
     @Test
-    void orders_courierNoBox_empty() throws Exception {
+    void orders_courierNoBox_noFood() throws Exception {
         mockMvc.perform(get("/orders/courier-2"))
                 .andExpect(status().isOk())
-                .andExpect(content().string("[]"));
+                .andExpect(content().string("[{\"id\":\"order-2\",\"description\":\"2 chairs\"}]"));
     }
 
     @Test

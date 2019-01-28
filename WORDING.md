@@ -60,5 +60,6 @@ just by changing the configuration)
 ## Notes
 
 - Take advantage of the provided classes
-- Ideally, you shouldn't need to modify any of the provided classes
+- Ideally, you shouldn't need to modify any of the provided classes 
+//just finished the exercise and read this. Sorry!
 

@@ -1,3 +1,5 @@
 backender.welcome_message: Welcome, stranger!
 backender.boxable_foods: 'pizza, cake, flamingo'
 backender.vehicles_range: '{MOTORCYCLE: 500, BICYCLE: 5, ELECTRIC_SCOOTER: 500}' # 500km is an assumption and should be discussed with PMs
+backender.slot_priority: 'VIP, FOOD, ALL'
+backender.distance_slot_range: 0.5
